@@ -1,0 +1,63 @@
+.copy-command-clipboard {
+  position: relative;
+  display: flex;
+  padding: 15px 30px;
+  align-items: center;
+  border: solid 1px $athensgray;
+  background-color: $athensgraylight;
+  border-radius: 6px;
+  word-break: break-all;
+  max-width: max-content;
+  cursor: pointer;
+
+  &.copied {
+    .copy-message {
+      opacity: 1;
+    }
+  }
+
+  .copy-message {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: $algaegreen;
+    color: $white;
+    font-size: 10px;
+    padding: 5px 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: $black;
+      }
+    }
+  }
+
+  code {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Courier New", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    color: $black;
+    white-space: pre;
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+
+  svg {
+    height: 27px;
+    margin-left: 50px;
+
+    path {
+      transition-duration: 0.5s;
+      transition-property: fill;
+      fill: $palesky;
+    }
+  }
+}
