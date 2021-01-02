@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <div style={{ margin: 200 }}>
-      <CopyCommandClipboard code="npm i copy-command-clipboard" iconShow={true} /* customIcon={explorerIcon} */ />
+      <CopyCommandClipboard code="npm i copy-command-clipboard" /* iconShow={true} */ /* customIcon={explorerIcon} */ />
     </div>
   )
 }
